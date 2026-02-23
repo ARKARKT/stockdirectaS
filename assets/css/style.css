@@ -1,0 +1,43 @@
+:root{
+  --base:#0b3b6f;
+  --accent:#ff6b6b;
+  --muted:#666;
+  --bg:#f5f7fb;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#111}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ef}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.site-header h1{margin:0;color:var(--base)}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.hero{background:linear-gradient(135deg,var(--base),#164a8b);color:#fff;padding:2rem;border-radius:var(--radius);margin:1rem 0}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.features article{background:#fff;padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,28,65,0.06)}
+.auth{max-width:420px;margin:3rem auto;background:#fff;padding:1.5rem;border-radius:var(--radius)}
+.auth label{display:block;margin-bottom:.75rem}
+.auth input{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:4px}
+.btn{display:inline-block;background:var(--base);color:#fff;padding:.6rem 1rem;border-radius:6px;border:none;cursor:pointer}
+.admin-grid{margin:2rem 0}
+.admin-actions{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.admin-actions a{display:block;padding:1rem;background:#fff;border-radius:6px;text-decoration:none;color:var(--base);box-shadow:0 6px 18px rgba(15,28,65,0.06)}
+.errors{background:#ffecec;border:1px solid #f5c2c2;padding:.75rem;border-radius:6px;margin-bottom:1rem}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);margin-top:2rem}
+
+/* Responsive hero similar a store */
+.hero h2{font-size:1.5rem;margin:0}
+
+/* Grid options for products (3/4/5) se controlará por clase en la tienda */
+.products-grid-3{grid-template-columns:repeat(3,1fr)}
+.products-grid-4{grid-template-columns:repeat(4,1fr)}
+.products-grid-5{grid-template-columns:repeat(5,1fr)}
+
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(15,28,65,0.06)}
+.card img{display:block;width:100%;height:200px;object-fit:cover}
+.card .meta{padding:0.75rem}
+
+/* pequeño efecto hover */
+.card:hover{transform:translateY(-4px);transition:transform .2s ease}
+
+/* Variables de tema por vendedor: se podrán sobrescribir con inline CSS en la vista de la tienda */

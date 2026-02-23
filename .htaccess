@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Rewrite /store/slug to public store handler
+RewriteRule ^store/([^/]+)/?$ /public/store.php?slug=$1 [L,QSA]
+
+# Optional: redirect legacy /public/store.php?slug=foo to pretty URL (internal redirect not enforced)
+RewriteCond %{THE_REQUEST} /public/store.php\?slug=([^&\s]+) [NC]
+RewriteRule ^ /store/%1? [R=302,L]

@@ -1,0 +1,34 @@
+# Node, vendor and system files
+node_modules/
+vendor/
+
+# Env files
+.env
+.env.*
+
+# Database dumps
+*.sql
+*.sql.zip
+
+# Archives and scripts
+*.zip
+*.ps1
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Public test file
+public/smtp_test.php
+
+# Other
+/uploads/
+/cache/
